@@ -9,6 +9,7 @@
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 //function prototypes
@@ -17,11 +18,18 @@ int countVowel(string str);
 int main(void)
 {
 	//variables
-	int vowelTotal;
-	
-	vowelTotal = countVowel("test");
+	string input;
 
-	cout << "The total amount of characters is " << vowelTotal;
+	while (true) 
+	{
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+
+		if (input == "Q") 
+			break;
+
+		cout << "The total amount of characters in \"" << input << "\" is " << countVowel(input) << endl;
+	}
 }
 
 int countVowel(string str)
