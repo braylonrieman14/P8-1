@@ -12,30 +12,30 @@
 using namespace std;
 
 //function prototypes
-int countCharacter(string str);
+int countVowel(string str);
 
 int main(void)
 {
 	//variables
-	int charTotal;
+	int vowelTotal;
 	
-	charTotal = countCharacter("test");
+	vowelTotal = countVowel("test");
 
-	cout << "The total amount of characters is " << charTotal;
+	cout << "The total amount of characters is " << vowelTotal;
 }
 
-int countCharacter(string str)
+int countVowel(string str)
 {
 	//variables
-	int charTotal = 0;
+	int vowelTotal = 0;
 	char currentChar;
 
 	for (int i = 0; i < str.length(); i++)
 	{
 		currentChar = str[i];
-		if (currentChar != ' ')
-			charTotal++;
+		if (currentChar == 'A' || currentChar == 'a' || currentChar == 'E' || currentChar == 'e' || currentChar == 'I' || currentChar == 'i' || currentChar == 'O' || currentChar == 'o' || currentChar == 'U' || currentChar == 'u')
+			vowelTotal++;
 	}
 
-	return(charTotal);
+	return(vowelTotal);
 }
